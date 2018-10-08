@@ -4,7 +4,7 @@ require_once 'model/database.php';
 
 $id = $_GET["id"];
 
-$tag = getTag($id);
+$tag = getEntity("tag", $id);
 $liste_photos = getAllPhotosByTag($id);
 
 getHeader($tag["titre"], "Description du tag");
